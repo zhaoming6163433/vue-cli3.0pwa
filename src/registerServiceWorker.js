@@ -1,11 +1,8 @@
-importScripts("/pwatest/precache-manifest.81a58fc3103eabc9fe7f8a1b8bca2861.js", "https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
-
 /* eslint-disable no-console */
 
 import { register } from 'register-service-worker'
-
 if (process.env.NODE_ENV === 'production') {
-  register(`${process.env.BASE_URL}service-worker.js`, {
+  register(`${process.env.BASE_URL}sw.js`, {
     ready () {
       console.log(
         'App is being served from cache by a service worker.\n' +
@@ -26,4 +23,3 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
 }
-
